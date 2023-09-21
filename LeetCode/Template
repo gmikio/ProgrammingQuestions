@@ -10,7 +10,7 @@ class Solution(object):
 
 if __name__ == '__main__':
     import unittest
-    f = Solution().function()
+    f = Solution().function
 
     class Test(unittest.TestCase):
         
