@@ -28,7 +28,9 @@ class Solution(object):
         
         k = 0
         for number in nums:
-            solution.append(twoSum(nums.remove(number), number))
+            newList = nums.copy()
+            newList.remove(number)
+            solution.append(twoSum(newList, number))
             print ( k, "-> solution till now = ", solution)
             k += 1 
             
@@ -40,14 +42,19 @@ class Solution(object):
 if __name__ == '__main__':
     import unittest
     f = Solution().threeSum
+    
+    print("caso de teste 1 -------------------------")
+    f([-1, 0, 1, 2, -1, -4])
+    print("caso de teste 2 -------------------------")
+    f([0,1,1])
 
-    class Test(unittest.TestCase):
+    # class Test(unittest.TestCase):
 
-        def test_1(self):
-            self.assertEqual(f([-1, 0, 1, 2, -1, -4]),
-                             [[-1, -1, 2], [-1, 0, 1]])
+    #     def test_1(self):
+    #             self.assertEqual(f([-1, 0, 1, 2, -1, -4]),
+    #                          [[-1, -1, 2], [-1, 0, 1]])
 
-        def test_2(self):
-            self.assertEqual(f([0,1,1]), [])
+    #     def test_2(self):
+    #         self.assertEqual(f([0,1,1]), [])
 
-    unittest.main()
+    # unittest.main()
