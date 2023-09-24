@@ -9,7 +9,7 @@ class Solution(object):
         n = len(nums)
         i = 1
         
-        while i < n:
+        while i < n - 1:
             if i > 1:
                 if nums[i-1] == nums[i-2]:
                     i += 1
