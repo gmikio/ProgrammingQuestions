@@ -66,3 +66,16 @@ def find_kth_maximum(arr, k):
 
     max_heap = MaxHeap()
     for num in arr:
+        max_heap.insert(num)  # Insere cada elemento na max heap.
+
+    kth_max = None
+    for _ in range(k):
+        kth_max = max_heap.extract_max()  # Extrai o k-ésimo elemento máximo da max heap.
+
+    return kth_max
+
+# Exemplo de uso
+arr = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
+k = 3
+result = find_kth_maximum(arr, k)
+print(f"O {k}º maior valor é: {result}")
