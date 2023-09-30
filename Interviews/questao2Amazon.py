@@ -1,6 +1,6 @@
 def stockSpike(prices, k):
     nKSpikes = 0
-    for i in range(k, len(prices)):
+    for i in range(k, len(prices) - k):
         nLeftElementsLesser = 0
         nRightElementsLesser = 0
         for j in range(0, len(prices)):
